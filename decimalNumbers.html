@@ -1,17 +1,18 @@
 <html>
-    <head>
-        <script type='text/javascript' src='https://code.jquery.com/jquery-1.8.3.js'></script>
-        <script type='text/javascript' src='decimalNumbers.js'></script>
-        <script type='text/javascript'>
-            $(document).ready(function() {
-                $('#qty').mbfDecimalNumbers();
-                $('#margin').mbfDecimalNumbers({integers: 1});
-            });
-        </script>
-    </head>
-    <body>
-        Number: <input type="text" id="qty" />
-        <br/>
-        Margin: <input type="text" id="margin" />
-    </body>
+  <head>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.8.3.js'></script>
+    <script type='text/javascript' src='decimalNumbers.js'></script>
+    <script type='text/javascript'>
+      $(document).ready(function() {
+        $('#qty').mbfDecimalNumbers();
+        $('#margin').mbfDecimalNumbers({integers: 1});
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Example:</h1>
+    Number: <input type="text" id="qty" />
+    <br/>
+    Margin: <input type="text" id="margin" />
+  </body>
 </html>
