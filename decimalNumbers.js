@@ -10,13 +10,13 @@
 
         self.insertchar = function(ch) {
             return (
-                   self.soloDigitos(ch)
-                && self.validarPunto(ch)
-                && self.validarDigito(ch)
+                   self.justDigits(ch)
+                && self.validateDot(ch)
+                && self.validateDigit(ch)
             );
         };
 
-        self.validarPunto = function(ch) {
+        self.validateDot = function(ch) {
             var result = true;
             if (ch === DOT) {
                 if (self.settings.decimals > 0) {
@@ -35,7 +35,7 @@
             return result;
         };
 
-        self.validarDigito = function(ch) {
+        self.validateDigit = function(ch) {
             var result = true;
             if (ch >= 48 && ch <= 57) {
                 var a = text.split('.');
@@ -56,7 +56,7 @@
             return result;
         };
 
-        self.soloDigitos = function(ch) {
+        self.justDigits = function(ch) {
             if (ch !== 8 
                 && ch !== 0 
                 && (ch < 48 || ch > 57)
